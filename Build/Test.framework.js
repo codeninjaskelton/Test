@@ -1159,26 +1159,26 @@ var tempDouble;
 var tempI64;
 
 var ASM_CONSTS = {
- 3139428: function() {
+ 3139316: function() {
   Module["emscripten_get_now_backup"] = performance.now;
  },
- 3139483: function($0) {
+ 3139371: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 3139531: function($0) {
+ 3139419: function($0) {
   performance.now = function() {
    return $0;
   };
  },
- 3139579: function() {
+ 3139467: function() {
   performance.now = Module["emscripten_get_now_backup"];
  },
- 3139634: function() {
+ 3139522: function() {
   return Module.webglContextAttributes.premultipliedAlpha;
  },
- 3139695: function() {
+ 3139583: function() {
   return Module.webglContextAttributes.preserveDrawingBuffer;
  }
 };
@@ -14229,21 +14229,10 @@ function invoke_vii(index, a1, a2) {
  }
 }
 
-function invoke_vi(index, a1) {
+function invoke_iiiiii(index, a1, a2, a3, a4, a5) {
  var sp = stackSave();
  try {
-  dynCall_vi(index, a1);
- } catch (e) {
-  stackRestore(sp);
-  if (e !== e + 0 && e !== "longjmp") throw e;
-  _setThrew(1, 0);
- }
-}
-
-function invoke_viii(index, a1, a2, a3) {
- var sp = stackSave();
- try {
-  dynCall_viii(index, a1, a2, a3);
+  return dynCall_iiiiii(index, a1, a2, a3, a4, a5);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -14262,10 +14251,10 @@ function invoke_iii(index, a1, a2) {
  }
 }
 
-function invoke_iiiiii(index, a1, a2, a3, a4, a5) {
+function invoke_viii(index, a1, a2, a3) {
  var sp = stackSave();
  try {
-  return dynCall_iiiiii(index, a1, a2, a3, a4, a5);
+  dynCall_viii(index, a1, a2, a3);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
@@ -14332,6 +14321,17 @@ function invoke_viif(index, a1, a2, a3) {
  var sp = stackSave();
  try {
   dynCall_viif(index, a1, a2, a3);
+ } catch (e) {
+  stackRestore(sp);
+  if (e !== e + 0 && e !== "longjmp") throw e;
+  _setThrew(1, 0);
+ }
+}
+
+function invoke_vi(index, a1) {
+ var sp = stackSave();
+ try {
+  dynCall_vi(index, a1);
  } catch (e) {
   stackRestore(sp);
   if (e !== e + 0 && e !== "longjmp") throw e;
